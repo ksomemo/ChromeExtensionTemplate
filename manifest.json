@@ -1,0 +1,27 @@
+{
+	"name" : "ChromeExtensionTemplate",
+	"version" : "0.0.1",
+	"manifest_version" : 2,
+	"description" : "ChromeExtensionTemplate",
+	"background": {
+		"scripts": [
+			"js/lib/jquery.min.js"
+		]
+	},
+	"permissions" : [
+		"http://google.co.jp"
+	],
+	"content_scripts": [
+		{
+			"matches": [
+				"http://google.co.jp"
+			],
+			"js": [
+				"js/lib/jquery.min.js",
+				"js/helloWorld.js"
+			],
+			"run_at": "document_start",
+			"all_frames": true
+		}
+	]
+}
